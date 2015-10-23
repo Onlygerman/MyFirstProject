@@ -14,21 +14,12 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function insert()
-    {
-        $user = new User;
-        $user['name'] = 'Sasha';
-        $user['email'] = 'Alexander111@yandex.ru';
-        $user['password'] = '1q2w3e4r';
-        $user->save();
-        return "Запись успешно добавлена!";
-    }
 
     public function index()
     {
 
         $users = User::all();
-        return $users;
+        return view('users.index')->with('users', $users);
     }
 
     /**
