@@ -22,7 +22,7 @@
     <div class="form-group">
 
         {!! Form::label('password','Пароль:')!!}
-        {!! Form::text('password') !!}
+        {!! Form::password('password') !!}
 
     </div>
 
