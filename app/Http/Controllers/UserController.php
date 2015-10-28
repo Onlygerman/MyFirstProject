@@ -17,7 +17,8 @@ class UserController extends Controller
 
     public function index()
     {
-
+        echo "You login as: ";
+        echo \Auth::user()->name;
         $users = User::all();
         return view('users.index')->with('users', $users);
     }
